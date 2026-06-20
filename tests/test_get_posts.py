@@ -1,19 +1,55 @@
-import requests
-import pytest_check as check
+from faker import Faker
+
+fake = Faker()
 
 base_url = "https://jsonplaceholder.typicode.com/posts"
 
-def test_get_posts():
-    response = requests.get(base_url)
-    assert response.status_code == 200, f"Expected 200, but got: {response.status_code}"
+def test_get_posts(get_endpoints):
+    get_endpoints.get_all_posts(base_url)
+    get_endpoints.check_response_status_is_200()
+    get_endpoints.check_data_is_a_list()
+    get_endpoints.check_json_length_is_not_zero()
+    get_endpoints.check_first_element_is_dictionary()
+    get_endpoints.check_that_elements_are_ordered_by_id()
 
-    json_data = response.json()
+def test_get_post_by_id(get_endpoints, generate_random_id):
+    random_post_id = generate_random_id
 
-    assert isinstance(json_data, list), f"Response is not a list, but {type(json_data)}"
-    assert len(json_data) > 0, "Json data is empty"
+    get_endpoints.get_posts_by_id(base_url, random_post_id)
+    get_endpoints.check_response_status_is_200()
+    get_endpoints.check_that_returned_single_post()
+    get_endpoints.check_post_id_equal_requested_post()
+    get_endpoints.check_userid_exists_in_response()
+    get_endpoints.check_title_exists_in_response()
+    get_endpoints.check_body_exists_in_response()
 
-    first_post = json_data[0]
-    assert isinstance(first_post, dict), f"Expected a dictionary, but got {type(first_post)} "
+def test_get_comments_to_the_post(get_endpoints, generate_random_id):
+    random_post_id = generate_random_id
 
-    for expected_id, item in enumerate(json_data, start=1):
-        check.equal(item.get("id"), expected_id, f"Expected id {expected_id}")
+    get_endpoints.get_comments_to_the_post(base_url, random_post_id)
+    get_endpoints.check_response_status_is_200()
+    get_endpoints.check_json_length_is_not_zero()
+    get_endpoints.verify_comment_data()
+
+def test_create_a_post(post_endpoints, generate_random_id, delete_post):
+    title = fake.word()
+    body = fake.sentence()
+    userId = generate_random_id
+    data = {'title': title,'body': body, 'userId': userId}
+
+    post_endpoints.create_a_post(base_url, data)
+    post_endpoints.check_response_status_is_201()
+    post_endpoints.check_json_length_is_not_zero()
+    post_endpoints.check_returned_userid_is_created_userid()
+    post_endpoints.check_returned_title_is_created_title()
+    post_endpoints.check_returned_body_is_created_body()
+    delete_post(base_url, post_endpoints.created_post_id)
+
+def test_delete_post(delete_endpoints, get_endpoints, create_post):
+    delete_endpoints.delete_post(base_url, create_post)
+    # deleted resourced return {} with status 200
+    delete_endpoints.check_response_status_is_200()
+    get_endpoints.get_posts_by_id(base_url, create_post)
+    get_endpoints.check_json_length_is_zero()
+
+
