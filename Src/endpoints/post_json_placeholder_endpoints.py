@@ -1,8 +1,8 @@
 import requests
 import pytest_check as check
-from endpoints.endpoints_handlers import Endpoint
+from Src.endpoints.BaseEndpoint import BaseEndpoint
 
-class PostEndpoints(Endpoint):
+class PostEndpoints(BaseEndpoint):
     response = None
     created_post_id = None
     returned_userId = None

@@ -1,8 +1,9 @@
 from faker import Faker
+import os
 
 fake = Faker()
 
-base_url = "https://jsonplaceholder.typicode.com/posts"
+base_url = os.getenv("BASE_URL")
 
 def test_get_posts(get_endpoints):
     get_endpoints.get_all_posts(base_url)

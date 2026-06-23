@@ -1,7 +1,7 @@
 import requests
-from endpoints.endpoints_handlers import Endpoint
+from Src.endpoints.BaseEndpoint import BaseEndpoint
 
-class DeleteEndpoints(Endpoint):
+class DeleteEndpoints(BaseEndpoint):
     response = None
 
     def delete_post(self, url, post_id):

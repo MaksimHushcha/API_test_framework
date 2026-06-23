@@ -1,8 +1,8 @@
 import pytest
 import random
-from endpoints.get_json_placeholder_endpoints import GetEndpoints
-from endpoints.delete_json_placeholder_endpoints import DeleteEndpoints
-from endpoints.post_json_placeholder_endpoints import PostEndpoints
+from Src.endpoints.get_json_placeholder_endpoints import GetEndpoints
+from Src.endpoints.delete_json_placeholder_endpoints import DeleteEndpoints
+from Src.endpoints.post_json_placeholder_endpoints import PostEndpoints
 
 from faker import Faker
 

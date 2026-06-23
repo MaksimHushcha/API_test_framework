@@ -1,26 +1,14 @@
 import requests
 import pytest_check as check
-from endpoints.endpoints_handlers import Endpoint
+from Src.endpoints.BaseEndpoint import BaseEndpoint
 
 
-class GetEndpoints(Endpoint):
-    response = None
-    first_post = None
-    requested_post_id = None
-    returned_post_id = None
-    created_post_id = None
-    returned_userId = None
-    created_user_id = None
-    returned_title = None
-    created_title = None
-    returned_body = None
-    created_body = None
+class PostsEndpoints(BaseEndpoint):
+    path = "posts"
 
-    def get_all_posts(self, url):
-        response = requests.get(url)
-        self.status_code = response.status_code
-        self.json_data = response.json()
-        self.first_post = self.json_data[0]
+    def get_all_posts(self):
+        return self.get(self.path)
+
 
     def get_posts_by_id(self, url, post_id):
         response = requests.get(url, params={'id': post_id})
