@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Config/config.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/endpoints/CommentsEndpoints.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/BaseEndpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/BaseEndpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/delete_json_placeholder_endpoints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/get_json_placeholder_endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/post_json_placeholder_endpoints.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/delete_json_placeholder_endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/delete_json_placeholder_endpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/endpoints_handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/BaseEndpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/get_json_placeholder_endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/get_json_placeholder_endpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/post_json_placeholder_endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/post_json_placeholder_endpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_get_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_get_posts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

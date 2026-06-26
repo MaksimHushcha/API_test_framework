@@ -1,23 +1,18 @@
 import pytest
 import random
-from Src.endpoints.get_json_placeholder_endpoints import GetEndpoints
-from Src.endpoints.delete_json_placeholder_endpoints import DeleteEndpoints
-from Src.endpoints.post_json_placeholder_endpoints import PostEndpoints
+from Src.endpoints.PostsEndpoints import PostsEndpoints
+from Src.endpoints.CommentsEndpoints import CommentsEndpoints
 
 from faker import Faker
 
 
 @pytest.fixture()
-def get_endpoints():
-    return GetEndpoints()
+def posts_endpoints():
+    return PostsEndpoints()
 
 @pytest.fixture()
-def post_endpoints():
-    return PostEndpoints()
-
-@pytest.fixture()
-def delete_endpoints():
-    return DeleteEndpoints()
+def comments_endpoints():
+    return CommentsEndpoints
 
 @pytest.fixture()
 def generate_random_id():
@@ -25,13 +20,12 @@ def generate_random_id():
 
 @pytest.fixture
 def create_post(post_endpoints, generate_random_id):
-    base_url = "https://jsonplaceholder.typicode.com/posts"
     fake = Faker()
     title = fake.word()
     body = fake.sentence()
     userId = generate_random_id
     data = {'title': title,'body': body, 'userId': userId}
-    post_endpoints.create_a_post(base_url, data)
+    post_endpoints.create_a_post(data)
     return post_endpoints.created_post_id
 
 @pytest.fixture
