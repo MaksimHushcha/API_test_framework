@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/endpoints/CommentsEndpoints.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/comments_schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_one_post.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/BaseEndpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/BaseEndpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/delete_json_placeholder_endpoints.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/get_json_placeholder_endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/post_json_placeholder_endpoints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_all.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_get_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_get_posts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,31 +35,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_get_posts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_get_posts.py.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for tests.test_get_posts.test_create_a_new_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_get_posts.executor": "Run",
+    "Python tests.Python tests in test_get_posts.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/37529/API_test_Framework/Test_data/Schemas",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\37529\API_test_Framework" />
       <recent name="C:\Users\37529\API_test_Framework\Src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_get_posts.test_get_posts">
-    <configuration name="Python tests for tests.test_get_posts.test_create_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post">
+    <configuration name="Python tests for tests.test_get_posts.test_create_a_new_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,7 +77,7 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_create_a_post&quot;" />
+      <option name="_new_target" value="&quot;tests.test_get_posts.test_create_a_new_post&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -149,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post" />
         <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_posts" />
-        <item itemvalue="Python tests.Python tests in test_get_posts.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_create_a_post" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
         <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_post_by_id" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
+        <item itemvalue="Python tests.Python tests in test_get_posts.py" />
       </list>
     </recent_temporary>
   </component>
@@ -176,5 +178,12 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="response" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

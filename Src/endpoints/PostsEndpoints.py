@@ -14,7 +14,7 @@ class PostsEndpoints(BaseEndpoint):
         return self.delete(self.path + f"/{post_id}", **kwargs)
 
     def create_a_post(self, payload, **kwargs):
-        return self.post(self.path, json=payload, **kwargs)
+        return self.post(self.path, json=payload, headers = {"Content-Type": "application/json; charset=UTF-8"}, **kwargs)
 
     def put_a_post(self, post_id, payload, **kwargs):
         return self.put(f"{self.path}/{post_id}", json=payload, **kwargs)

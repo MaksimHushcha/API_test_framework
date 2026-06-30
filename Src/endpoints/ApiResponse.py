@@ -37,34 +37,20 @@ class ApiResponse:
                 f"JSON data does not match the expected schema '{expected_schema}'. Error: {err.message}")
         return self
 
-    # def check_that_elements_are_ordered_by_id(self):
-    #     for expected_id, item in enumerate(self.json_data, start=1):
-    #         check.equal(item.get("id"), expected_id, f"Expected id {expected_id}, but got {item.get('id')}")
-    #
-    # def check_that_returned_single_post(self):
-    #     assert len(self.json_data) == 1, f"Expected a single element, but got {len(self.json_data)}"
-    #
-    # def check_post_id_equal_requested_post(self):
-    #     check.equal(self.requested_post_id, self.returned_post_id ,
-    #                 f"Expected postId to be {self.requested_post_id,}, but got {self.returned_post_id}")
-    #
-    # def check_userid_exists_in_response(self):
-    #     check.is_not_none(self.returned_userId,
-    #                       f"Expected userId to be in the response, but got value: {self.returned_userId}")
-    #
-    #
-    # def check_title_exists_in_response(self):
-    #     check.is_not_none(self.returned_title,
-    #                       f"Expected userId to be in the response, but got value: {self.returned_title}")
-    #
-    #
-    # def check_body_exists_in_response(self):
-    #     check.is_not_none(self.returned_body,
-    #                       f"Expected userId to be in the response, but got value: {self.returned_body}")
-    #
-    # def verify_comment_data(self):
-    #     for item in self.json_data:
-    #         check.equal(item.get("postId"), self.requested_post_id, f"Expected postId to match the requested post, but got value: {item.get('postId')}")
-    #         check.is_not_none(item.get("id"), "Expected id to not be null")
-    #         check.is_not_none(item.get("email"), "Expected email to not be null")
-    #         check.is_not_none(item.get("body"), "Expected body to not be null")
+    def assert_sorted_by_id(self):
+        first_object_id = 0
+        for item in self.json_data:
+            second_object_id = item.get("id")
+            assert second_object_id > first_object_id,\
+                f"Expected items to be sorted by id, but {second_object_id} is not higher than {first_object_id}"
+            first_object_id = second_object_id
+        return self
+
+    def assert_returned_requested_content(self, expected_id, expected_key):
+        if type(self.json_data) == list:
+            for item in self.json_data:
+                assert item.get(expected_key) == expected_id, f"Expected {expected_key} to be returned by id, but got {expected_id} instead"
+        if type(self.json_data) == dict:
+            assert self.json_data.get(expected_key) == expected_id, f"Expected {expected_key} to be returned by id, but got {expected_id} instead"
+        return self
+
