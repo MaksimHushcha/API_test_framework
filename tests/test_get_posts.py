@@ -16,35 +16,38 @@ def test_get_post_by_id(posts_endpoints, generate_random_id):
         posts_endpoints.get_posts_by_id(generate_random_id)
         .assert_status(200)
         .assert_schema("posts_schema_one_post.json")
-        .assert_returned_requested_content(generate_random_id, "id")
+        .assert_returned_requested_key(generate_random_id, "id")
     )
 
 def test_get_comments_to_the_post(comments_endpoints, generate_random_id):
-    (
+    response = (
         comments_endpoints.get_comments_to_the_post(generate_random_id)
         .assert_status(200)
         .assert_schema("comments_schema.json")
-        .assert_returned_requested_content(generate_random_id, "postId")
+        .assert_returned_requested_key(generate_random_id, "postId")
         .assert_sorted_by_id()
     )
 
-def test_create_a_new_post(posts_endpoints, generate_a_payload, delete_post):
+def test_create_a_new_post(posts_endpoints, generate_a_post_payload, delete_post):
     response = (
-        posts_endpoints.create_a_post(generate_a_payload)
+        posts_endpoints.create_a_post(generate_a_post_payload)
         .assert_status(201)
         .assert_schema("posts_schema_one_post.json")
     )
     delete_post(response.json_data.get("id"))
-    
-    with check:
-        assert response.json_data.get("userId") == generate_a_payload.get("userId"), \
-            f"Invalid post id returned: Expected {generate_a_payload.get('userId')}, but got {response.json_data.get('userId')}"
-        assert response.json_data.get("title") == generate_a_payload.get("title"), \
-            f"Invalid post title returned: Expected {generate_a_payload.get('title')}, but got {response.json_data.get('title')}"
-        assert response.json_data.get("body") == generate_a_payload.get("body"), \
-          f"Invalid post title returned: Expected {generate_a_payload.get('body')}, but got {response.json_data.get('body')}"
+    response.check_returned_requested_content(generate_a_post_payload, response.json_data, excluded_key=["id"])
 
-
+def test_replace_a_post(posts_endpoints, create_post_and_get_its_id, generate_a_post_payload, delete_post):
+# test api doesn't actually "saves" new posts, thus a hardcoded post_id = 1 is used.
+    response = (
+        posts_endpoints.put_a_post(post_id=1, payload=generate_a_post_payload)
+        .assert_status(200)
+        .assert_schema("posts_schema_one_post.json")
+    )
+    delete_post(create_post_and_get_its_id)
+    response.check_returned_requested_content(generate_a_post_payload, response.json_data, excluded_key=["id"])
+    # this is designed to fail
+    assert response.json_data.get("id") == create_post_and_get_its_id
 
 
 # def test_delete_post(delete_endpoints, get_endpoints, create_post):

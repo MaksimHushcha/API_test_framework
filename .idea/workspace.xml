@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/comments_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_one_post.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_all.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_get_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_get_posts.py" afterDir="false" />
     </list>
@@ -41,8 +37,9 @@
     "Python tests.Python tests for tests.test_get_posts.test_create_a_new_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post.executor": "Run",
-    "Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor": "Debug",
     "Python tests.Python tests for tests.test_get_posts.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_replace_a_post.executor": "Run",
     "Python tests.Python tests in test_get_posts.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -63,7 +60,7 @@
       <recent name="C:\Users\37529\API_test_Framework\Src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post">
+  <component name="RunManager" selected="Python tests.Python tests in test_get_posts.py">
     <configuration name="Python tests for tests.test_get_posts.test_create_a_new_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
@@ -115,7 +112,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_get_posts.test_get_posts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_get_posts.test_replace_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,7 +125,7 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_get_posts&quot;" />
+      <option name="_new_target" value="&quot;tests.test_get_posts.test_replace_a_post&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -151,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_posts" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_post_by_id" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
         <item itemvalue="Python tests.Python tests in test_get_posts.py" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_replace_a_post" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_post_by_id" />
       </list>
     </recent_temporary>
   </component>

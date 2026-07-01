@@ -2,6 +2,7 @@ import json
 from typing import Any
 from pathlib import Path
 from jsonschema import validate, ValidationError
+from pytest_check import check
 
 class ApiResponse:
     def __init__(self, response):
@@ -39,6 +40,7 @@ class ApiResponse:
 
     def assert_sorted_by_id(self):
         first_object_id = 0
+        assert isinstance(self.json_data, (list, dict)), f"Expected list or dict, got {type(self.json_data)}"
         for item in self.json_data:
             second_object_id = item.get("id")
             assert second_object_id > first_object_id,\
@@ -46,11 +48,29 @@ class ApiResponse:
             first_object_id = second_object_id
         return self
 
-    def assert_returned_requested_content(self, expected_id, expected_key):
+    def assert_returned_requested_key(self, expected_value, expected_key):
+        assert isinstance(self.json_data, (list, dict)), f"Expected list or dict, got {type(self.json_data)}"
         if type(self.json_data) == list:
             for item in self.json_data:
-                assert item.get(expected_key) == expected_id, f"Expected {expected_key} to be returned by id, but got {expected_id} instead"
+                with check:
+                    assert item.get(expected_key) == expected_value, \
+                        f"Expected {expected_value} to be returned by in {expected_key}, but got {item.get(expected_key)} instead"
         if type(self.json_data) == dict:
-            assert self.json_data.get(expected_key) == expected_id, f"Expected {expected_key} to be returned by id, but got {expected_id} instead"
+            with check:
+                assert self.json_data.get(expected_key) == expected_value, \
+                    f"Expected {expected_value} to be returned by {expected_key}, but got {self.json_data.get(expected_key)} instead"
+        return self
+
+    def check_returned_requested_content(self, expected_key_value_dict, received_key_value_dict, excluded_key=None):
+        try:
+            with check:
+                for key in received_key_value_dict:
+                    if key in excluded_key:
+                        continue
+                    with check:
+                        assert received_key_value_dict.get(key) == expected_key_value_dict.get(key), \
+                        f"Expected key: {key} to have value {expected_key_value_dict.get(key)}, but got {received_key_value_dict.get(key)}"
+        except AssertionError:
+            raise f"Response didn't return an iterable object {received_key_value_dict}"
         return self
 

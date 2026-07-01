@@ -19,7 +19,7 @@ def generate_random_id():
     return random.randint(1, 100)
 
 @pytest.fixture()
-def generate_a_payload(generate_random_id):
+def generate_a_post_payload(generate_random_id):
     fake = Faker()
     title = fake.word()
     body = fake.sentence()
@@ -28,9 +28,9 @@ def generate_a_payload(generate_random_id):
     return data
 
 @pytest.fixture
-def create_post(posts_endpoints, generate_a_payload):
-    posts_endpoints.create_a_post(generate_a_payload)
-    return posts_endpoints.created_post_id
+def create_post_and_get_its_id(posts_endpoints, generate_a_post_payload):
+    created_post_id = posts_endpoints.create_a_post(generate_a_post_payload).json_data.get('id')
+    return created_post_id
 
 @pytest.fixture
 def delete_post(posts_endpoints):
