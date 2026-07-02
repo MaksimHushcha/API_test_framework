@@ -61,7 +61,7 @@ class ApiResponse:
                     f"Expected {expected_value} to be returned by {expected_key}, but got {self.json_data.get(expected_key)} instead"
         return self
 
-    def check_returned_requested_content(self, expected_key_value_dict, received_key_value_dict, excluded_key=None):
+    def check_returned_requested_content(self, received_key_value_dict, expected_key_value_dict, excluded_key=None):
         try:
             with check:
                 for key in received_key_value_dict:

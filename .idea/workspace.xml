@@ -36,6 +36,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python tests.Python tests for tests.test_get_posts.test_create_a_new_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_delete_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor": "Debug",
     "Python tests.Python tests for tests.test_get_posts.test_get_posts.executor": "Run",
@@ -78,6 +79,23 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for tests.test_get_posts.test_delete_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API_test_Framework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_get_posts.test_delete_post&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for tests.test_get_posts.test_get_comments_to_the_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
@@ -92,23 +110,6 @@
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;tests.test_get_posts.test_get_comments_to_the_post&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.test_get_posts.test_get_post_by_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="API_test_Framework" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_get_post_by_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -149,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_get_posts.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_delete_post" />
         <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_replace_a_post" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_post_by_id" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
+        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_create_a_new_post" />
       </list>
     </recent_temporary>
   </component>
