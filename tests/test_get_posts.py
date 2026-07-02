@@ -1,7 +1,9 @@
 from faker import Faker
+import pytest
+import random
+import json
 
 fake = Faker()
-
 def test_get_posts(posts_endpoints):
     (
     posts_endpoints.get_all_posts()
@@ -57,6 +59,22 @@ def test_replace_a_post(posts_endpoints, create_and_teardown_the_post, generate_
 
     assert modified_post_get_response.json_data == response.json_data, \
         f"Expected to get a new post with requested content {response.json_data}, but got {modified_post_get_response.json_data}"
+
+@pytest.mark.parametrize("payload",
+    [
+        ({"title": "alice"}),
+        ({"body": "bob"}),
+        ({"userid": "123"}),
+    ]
+)
+def test_patch_a_post(posts_endpoints, create_and_teardown_the_post, get_post, payload):
+    response = (
+        posts_endpoints.patch_a_post(post_id=create_and_teardown_the_post, payload=payload)
+        .assert_status(200)
+        .assert_schema("posts_schema_one_post_patch.json")
+    )
+    print(response.json_data)
+    # assert response.json_data == payload, f"Expected to get a new post with requested content {payload}, but got {response.json_data}"
 
 def test_delete_post(posts_endpoints, create_a_post, get_post):
     response = (
