@@ -3,6 +3,7 @@ from typing import Any
 from pathlib import Path
 from jsonschema import validate, ValidationError
 from pytest_check import check
+import re
 
 class ApiResponse:
     def __init__(self, response):
@@ -48,17 +49,25 @@ class ApiResponse:
             first_object_id = second_object_id
         return self
 
-    def assert_returned_requested_key(self, expected_value, expected_key):
+    def assert_returned_key_value(self, expected_key, expected_value = None, expected_regex = None):
+        if (expected_value is not None) == (expected_regex is not None):
+             raise AssertionError("You must provide exactly one validation method: either expected_value OR expected_regex.")
         assert isinstance(self.json_data, (list, dict)), f"Expected list or dict, got {type(self.json_data)}"
-        if type(self.json_data) == list:
-            for item in self.json_data:
-                with check:
-                    assert item.get(expected_key) == expected_value, \
-                        f"Expected {expected_value} to be returned by in {expected_key}, but got {item.get(expected_key)} instead"
-        if type(self.json_data) == dict:
+
+        items = self.json_data if isinstance(self.json_data, list) else [self.json_data]
+        regex = re.compile(expected_regex) if expected_regex is not None else None
+
+        for item in items:
+            actual_value = item.get(expected_key)
             with check:
-                assert self.json_data.get(expected_key) == expected_value, \
-                    f"Expected {expected_value} to be returned by {expected_key}, but got {self.json_data.get(expected_key)} instead"
+                if expected_value is not None:
+                    assert actual_value == expected_value, \
+                        f"Expected '{expected_value}' in '{expected_key}', but got '{actual_value}' instead."
+
+                if regex is not None:
+                    is_match = actual_value is not None and regex.match(str(actual_value))
+                    assert is_match, \
+                        f"Expected value in '{expected_key}' to match regex '{expected_regex}', but got '{actual_value}' instead."
         return self
 
     def check_returned_requested_content(self, received_key_value_dict, expected_key_value_dict, excluded_key=None):

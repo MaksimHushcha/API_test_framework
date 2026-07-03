@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_one_post_patch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/comment_schema_one_comment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_comments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_get_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_get_posts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/CommentsEndpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/CommentsEndpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_get_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_posts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for tests.test_comments.test_create_a_new_comment.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_get_all_comments.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_get_comments_by_id.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_get_comments_by_post_id.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_create_a_new_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor": "Run",
     "Python tests.Python tests for tests.test_get_posts.test_delete_post.executor": "Run",
@@ -42,6 +50,7 @@
     "Python tests.Python tests for tests.test_get_posts.test_patch_a_post.executor": "Debug",
     "Python tests.Python tests for tests.test_get_posts.test_replace_a_post.executor": "Run",
     "Python tests.Python tests in test_get_posts.py.executor": "Run",
+    "Python tests.Python tests in test_posts.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -55,14 +64,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas" />
+      <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas\posts_schemas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas" />
+      <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas\posts_schemas" />
       <recent name="C:\Users\37529\API_test_Framework" />
       <recent name="C:\Users\37529\API_test_Framework\Src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_get_posts.test_patch_a_post">
-    <configuration name="Python tests for tests.test_get_posts.test_delete_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for tests.test_comments.test_create_a_new_comment">
+    <configuration name="Python tests for tests.test_comments.test_create_a_new_comment" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,11 +87,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_delete_post&quot;" />
+      <option name="_new_target" value="&quot;tests.test_comments.test_create_a_new_comment&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_get_posts.test_get_comments_to_the_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_comments.test_get_all_comments" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,11 +104,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_get_comments_to_the_post&quot;" />
+      <option name="_new_target" value="&quot;tests.test_comments.test_get_all_comments&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_get_posts.test_patch_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_comments.test_get_comments_by_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,11 +121,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_patch_a_post&quot;" />
+      <option name="_new_target" value="&quot;tests.test_comments.test_get_comments_by_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_get_posts.test_replace_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_comments.test_get_comments_by_post_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,11 +138,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_get_posts.test_replace_a_post&quot;" />
+      <option name="_new_target" value="&quot;tests.test_comments.test_get_comments_by_post_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_get_posts.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_posts.test_patch_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,17 +155,17 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_get_posts.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;tests.test_posts.test_patch_a_post&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_patch_a_post" />
-        <item itemvalue="Python tests.Python tests in test_get_posts.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_delete_post" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_replace_a_post" />
-        <item itemvalue="Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post" />
+        <item itemvalue="Python tests.Python tests for tests.test_comments.test_create_a_new_comment" />
+        <item itemvalue="Python tests.Python tests for tests.test_comments.test_get_comments_by_id" />
+        <item itemvalue="Python tests.Python tests for tests.test_comments.test_get_comments_by_post_id" />
+        <item itemvalue="Python tests.Python tests for tests.test_comments.test_get_all_comments" />
+        <item itemvalue="Python tests.Python tests for tests.test_posts.test_patch_a_post" />
       </list>
     </recent_temporary>
   </component>
@@ -178,15 +190,6 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_get_posts.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="response" />

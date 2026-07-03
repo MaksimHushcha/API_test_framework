@@ -17,15 +17,15 @@ def test_get_post_by_id(posts_endpoints, generate_random_id):
         posts_endpoints.get_posts_by_id(generate_random_id)
         .assert_status(200)
         .assert_schema("posts_schema_one_post.json")
-        .assert_returned_requested_key(generate_random_id, "id")
+        .assert_returned_key_value(expected_key="id", expected_value=generate_random_id)
     )
 
 def test_get_comments_to_the_post(comments_endpoints, generate_random_id):
-    response = (
+    (
         comments_endpoints.get_comments_to_the_post(generate_random_id)
         .assert_status(200)
         .assert_schema("comments_schema.json")
-        .assert_returned_requested_key(generate_random_id, "postId")
+        .assert_returned_key_value(expected_key="postId", expected_value=generate_random_id)
         .assert_sorted_by_id()
     )
 

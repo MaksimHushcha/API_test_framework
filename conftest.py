@@ -29,6 +29,16 @@ def generate_a_post_payload(generate_random_id):
         'userId': generate_random_id,
         }
 
+@pytest.fixture()
+def generate_a_comment_payload(generate_random_id):
+
+    fake = Faker()
+    return {
+        'name': fake.word(),
+        'email': fake.email(),
+        'body': fake.sentence(),
+        'postId': generate_random_id,
+        }
 
 @pytest.fixture
 def create_and_teardown_the_post(posts_endpoints, generate_a_post_payload, request):
@@ -52,11 +62,24 @@ def get_post(posts_endpoints):
         return posts_endpoints.get_posts_by_id(post_id)
     return _get_post
 
+@pytest.fixture
+def get_comment(comments_endpoints):
+
+    def _get_comment(comment_id):
+        return comments_endpoints.get_comments_by_id(comment_id)
+    return _get_comment
 
 @pytest.fixture
 def delete_post(request, posts_endpoints):
 
     def _register_deletion(post_id):
         request.addfinalizer(lambda: posts_endpoints.delete_post(post_id))
+
+    return _register_deletion
+
+@pytest.fixture
+def delete_comment(request, comments_endpoints):
+    def _register_deletion(post_id):
+        request.addfinalizer(lambda: comments_endpoints.delete_comment(post_id))
 
     return _register_deletion
