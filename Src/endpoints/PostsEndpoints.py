@@ -10,6 +10,9 @@ class PostsEndpoints(BaseEndpoint):
     def get_posts_by_id(self, post_id, **kwargs):
         return self.get(f"{self.path}/{post_id}", **kwargs)
 
+    def get_comments_by_post_id(self, post_id, **kwargs):
+        return self.get(f"{self.path}/{post_id}/comments", **kwargs)
+
     def delete_post(self, post_id, **kwargs):
         return self.delete(self.path + f"/{post_id}", **kwargs)
 
