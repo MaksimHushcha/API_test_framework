@@ -22,7 +22,7 @@ def test_get_comments_by_id(comments_endpoints, generate_random_id):
         .assert_returned_key_value(expected_key="email", expected_regex=email_regex)
     )
 
-@pytest.mark.xfail("Fake API, designed to fail")
+@pytest.mark.xfail(reason="Fake API, designed to fail")
 def test_create_a_new_comment(comments_endpoints, generate_a_comment_payload, delete_comment, get_comment):
     response = (
         comments_endpoints.create_a_comment(generate_a_comment_payload)
