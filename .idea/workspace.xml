@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflow/test_runner.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test_runner.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_runner.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
