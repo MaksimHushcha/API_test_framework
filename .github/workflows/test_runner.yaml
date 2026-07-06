@@ -29,7 +29,6 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           PYTEST_ADDOPTS: "--color=yes"
-
         run: pytest -v --tb=short --durations=10 --maxfail=5 -n auto --alluredir=allure-results
         continue-on-error: true
 
@@ -49,6 +48,7 @@ jobs:
           allure_results: allure-results
           allure_history: allure-history
           keep_reports: 20
+          subfolder: ${{ github.run_number }}
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
