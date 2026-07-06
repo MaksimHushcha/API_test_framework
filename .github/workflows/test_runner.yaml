@@ -46,8 +46,11 @@ jobs:
         id: allure-report
         with:
           allure_results: allure-results
+          gh_pages: gh-pages-dir
           allure_history: allure-history
           keep_reports: 20
+          subfolder: ${{ github.run_number }}
+
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: always()
@@ -55,7 +58,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          destination_dir: ${{ github.run_number }}
 
       - name: Send Telegram Notification
         uses: appleboy/telegram-action@master
