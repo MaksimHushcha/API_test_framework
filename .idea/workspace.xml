@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test_data/Schemas/comments_schemas/comment_schema_one_comment_patch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/comments_endpoint/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/comments_endpoint/test_comments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/posts_endpoint/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/comment_schema_one_comment.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/comments_schemas/comment_schema_one_comment.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/comments_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/comments_schemas/comments_schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_all.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schemas/posts_schema_all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_one_post.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schemas/posts_schema_one_post.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schema_one_post_patch.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test_data/Schemas/posts_schemas/posts_schema_one_post_patch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_comments.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/posts_endpoint/test_posts.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
