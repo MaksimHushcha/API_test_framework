@@ -68,7 +68,7 @@ jobs:
             Workflow: ${{ github.workflow }}
             Status: ${{ job.status }}
             Actor: ${{ github.actor }}
-            Commit: ${{ github.event.commits[0].message }}
+            Commit: ${{ github.event.head_commit.message || 'Manual run / Triggered without push' }}
             Repository: ${{ github.repository }}
-            Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            View report: https://github.io{{ github.run_number }}/index.html
+            Link: https://github.com{{ github.repository }}/actions/runs/${{ github.run_id }}
+            View report: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/index.html
