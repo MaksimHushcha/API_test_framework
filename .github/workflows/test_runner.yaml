@@ -57,3 +57,18 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+
+      - name: Send Telegram Notification
+        uses: appleboy/telegram-action@master
+        if: always()
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            Workflow: ${{ github.workflow }}
+            Status: ${{ job.status }}
+            Actor: ${{ github.actor }}
+            Commit: ${{ github.event.commits[0].message }}
+            Repository: ${{ github.repository }}
+            Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            View report: https://github.io{{ github.run_number }}/index.html
