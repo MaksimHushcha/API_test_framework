@@ -3,7 +3,8 @@ name: Run Pytest Manually
 on:
   workflow_dispatch:
   push:
-
+    branches:
+          - main
 permissions:
   contents: write
 
