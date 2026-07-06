@@ -20,11 +20,11 @@ class ApiResponse:
             f" Expected status {expected_code}.but got {self.status_code}. Response body: {self.raw_response.text}"
         return self
 
-    def assert_schema(self, expected_schema):
+    def assert_schema(self, folder, expected_schema):
         if self.json_data is None:
             raise AssertionError("Response returned empty data")
         base_path = Path(__file__).resolve().parents[2]
-        schema_path = base_path / "Test_data" / "Schemas" / expected_schema
+        schema_path = base_path / "Test_data" / "Schemas" / folder / expected_schema
         try:
             with open(schema_path, "r") as schema_file:
                 loaded_schema = json.load(schema_file)

@@ -1,6 +1,5 @@
 from Src.endpoints.BaseEndpoint import BaseEndpoint
 
-
 class PostsEndpoints(BaseEndpoint):
     path = "posts"
 
