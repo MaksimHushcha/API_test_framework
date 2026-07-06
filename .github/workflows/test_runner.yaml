@@ -2,15 +2,12 @@ name: Run Pytest Manually
 
 on:
   workflow_dispatch:
-  deployment_status:
 
 permissions:
   contents: write
-  deployments: read
 
 jobs:
   pytest:
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -43,6 +40,14 @@ jobs:
           ref: gh-pages
           path: gh-pages-dir
 
+      - name: Clean broken history paths
+        if: always()
+        run: |
+          if [ -d "gh-pages-dir" ]; then
+            find gh-pages-dir -type d -name "${{ github.run_number }}" -exec rm -rf {} +
+          fi
+        continue-on-error: true
+
       - name: Build Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -62,18 +67,21 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-history
 
-  telegram-notification:
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
-    runs-on: ubuntu-latest
-    steps:
+      - name: Wait for GitHub Pages deployment
+        if: always()
+        run: sleep 60
+
       - name: Send Telegram Notification
+        if: always()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            Workflow: Run Pytest Manually (Deployed)
-            Status: Success 🟢
+            Workflow: ${{ github.workflow }}
+            Status: ${{ job.status }} 🟢
             Actor: ${{ github.actor }}
+            Commit: ${{ github.event.head_commit && github.event.head_commit.message || 'Manual run' }}
             Repository: ${{ github.repository }}
-            View report: ${{ github.event.deployment_status.target_url }}
+            Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            View report: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/index.html
