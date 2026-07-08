@@ -5,7 +5,28 @@ from Src.endpoints.CommentsEndpoints import CommentsEndpoints
 import requests
 
 from faker import Faker
+fake = Faker()
 
+def pytest_generate_tests(metafunc):
+    if "missing_key_payload" in metafunc.fixturenames:
+        scenarios = [
+            lambda: {"body": fake.sentence(), "userId": random.randint(1, 100)},
+            lambda: {"title": fake.word(), "userId": random.randint(1, 100)},
+            lambda: {"title": fake.word(), "body": fake.sentence()}
+        ]
+        ids = ["missing_title", "missing_body", "missing_userId"]
+
+        metafunc.parametrize("missing_key_payload", scenarios, ids=ids)
+
+    elif "one_key_payload" in metafunc.fixturenames:
+        scenarios = [
+            lambda: {"body": fake.sentence()},
+            lambda: {"userId": random.randint(1, 100)},
+            lambda: {"title": fake.word()}
+        ]
+        ids = ["body_only_payload", "userId_only_payload", "title_only_payload"]
+
+        metafunc.parametrize("one_key_payload", scenarios, ids=ids)
 
 @pytest.fixture()
 def posts_endpoints():
@@ -14,7 +35,6 @@ def posts_endpoints():
 @pytest.fixture()
 def generate_a_post_payload(generate_random_id):
 
-    fake = Faker()
     return {
         'title': fake.word(),
         'body': fake.sentence(),
@@ -44,7 +64,7 @@ def get_post(posts_endpoints):
     return _get_post
 
 @pytest.fixture
-def delete_post(request, posts_endpoints):
+def schedule_post_deletion(request, posts_endpoints):
 
     def _register_deletion(post_id):
         request.addfinalizer(lambda: posts_endpoints.delete_post(post_id))
