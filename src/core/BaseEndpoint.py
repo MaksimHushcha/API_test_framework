@@ -1,7 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
-from Src.endpoints.ApiResponse import ApiResponse
+from src.core.ApiResponse import ApiResponse
 
 load_dotenv()
 

@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test_runner.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_runner.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiResponse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/BaseEndpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/BaseEndpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/CommentsEndpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/CommentsEndpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/endpoints/PostsEndpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/PostsEndpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/comments_schemas/comment_schema_one_comment.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/schemas/comments_schemas/comment_schema_one_comment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/comments_schemas/comment_schema_one_comment_patch.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/schemas/comments_schemas/comment_schema_one_comment_patch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/comments_schemas/comments_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/schemas/comments_schemas/comments_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schemas/posts_schema_all.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/schemas/posts_schemas/posts_schema_all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schemas/posts_schema_one_post.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/schemas/posts_schemas/posts_schema_one_post.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_data/Schemas/posts_schemas/posts_schema_one_post_patch.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/schemas/posts_schemas/posts_schema_one_post_patch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/comments_endpoint/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/comments_endpoint/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/comments_endpoint/test_comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/comments_endpoint/test_comments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/posts_endpoint/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/posts_endpoint/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/posts_endpoint/test_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/posts_endpoint/test_posts.py" afterDir="false" />
     </list>
@@ -34,10 +48,21 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python tests.Python tests for test_posts.TestGetPosts.__init__.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestGetMethodComments.test_get_comment_by_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.test_patch_edit_comment.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.test_patch_edit_comment_by_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPostMethodComments.test_create_a_new_comment_with_missing_keys.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPostMethodComments.test_put_edit_comment_with_an_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments.executor": "Run",
     "Python tests.Python tests for tests.comments_endpoint.test_comments.test_delete_comment.executor": "Run",
     "Python tests.Python tests for tests.comments_endpoint.test_comments.test_get_comments_by_id.executor": "Run",
     "Python tests.Python tests for tests.comments_endpoint.test_comments.test_put_edit_comment.executor": "Run",
     "Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_non_existing_id.executor": "Run",
     "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post.executor": "Run",
     "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post_with_invalid_id.executor": "Run",
     "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post_with_non_existing_id.executor": "Run",
@@ -95,15 +120,15 @@
       <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas\posts_schemas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\37529\API_test_Framework\src\core" />
       <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas\posts_schemas" />
       <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas\comment_schemas" />
       <recent name="C:\Users\37529\API_test_Framework\tests\comments_endpoint" />
       <recent name="C:\Users\37529\API_test_Framework\tests\posts_endpoint" />
-      <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id">
-    <configuration name="Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments">
+    <configuration name="Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,11 +141,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id&quot;" />
+      <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,11 +158,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post&quot;" />
+      <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post_by_invalid_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,11 +175,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post_by_invalid_id&quot;" />
+      <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestPatchMethodComments&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_with_missing_keys" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,11 +192,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_with_missing_keys&quot;" />
+      <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestPutMethodComments&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_comments.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,17 +209,17 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/comments_endpoint/test_comments.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id" />
-        <item itemvalue="Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post" />
-        <item itemvalue="Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post_by_invalid_id" />
-        <item itemvalue="Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_with_missing_keys" />
-        <item itemvalue="Python tests.Python tests for tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post" />
+        <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments" />
+        <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments" />
+        <item itemvalue="Python tests.Python tests in test_comments.py" />
+        <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id" />
+        <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id" />
       </list>
     </recent_temporary>
   </component>

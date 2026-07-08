@@ -37,7 +37,6 @@ class TestGetMethodPostsTests:
         )
         assert response.json_data == {}
 
-
 class TestGetCommentsToPostTests:
     comments_schemas = "comments_schemas"
     def test_get_comments_to_the_post(self, posts_endpoints, generate_random_id):
@@ -62,7 +61,6 @@ class TestGetCommentsToPostTests:
             .assert_status(200)
         )
         assert response.json_data == []
-
 
 @pytest.mark.xfail(reason="Fake API, designed to fail")
 class TestPostMethodPostsTests:
@@ -93,7 +91,6 @@ class TestPostMethodPostsTests:
         assert actual_post_response.json_data == response.json_data, \
             f"Expected to get a new post with requested content {response.json_data}, but got {actual_post_response.json_data}"
 
-
 class TestPutMethodPost:
     @pytest.mark.xfail(reason="Fake API, designed to fail, we are modifying non-existing ID, endpoint returns 500")
     def test_replace_a_post(self, posts_endpoints, create_and_teardown_the_post, generate_a_post_payload, get_post):
@@ -103,9 +100,7 @@ class TestPutMethodPost:
             .assert_schema(folder=posts_schema_folder, expected_schema="posts_schema_one_post.json")
         )
         response.check_returned_requested_content( response.json_data, generate_a_post_payload, excluded_key=["id"])
-
         modified_post_get_response = get_post(response.json_data.get("id"))
-
         assert modified_post_get_response.json_data == response.json_data, \
             f"Expected to get a new post with requested content {response.json_data}, but got {modified_post_get_response.json_data}"
 
@@ -115,7 +110,6 @@ class TestPutMethodPost:
             .assert_status(500)
         )
         assert response.json_data is None
-
 
 class TestPatchMethodPostTests:
     def test_patch_a_post(self, posts_endpoints, create_and_teardown_the_post, get_post, one_key_payload):
@@ -133,7 +127,6 @@ class TestPatchMethodPostTests:
             .assert_status(200)
         )
         assert response.json_data == generate_a_post_payload
-
 
 class TestDeleteMethodPostTests:
     def test_delete_post(self, posts_endpoints, create_a_post, get_post):

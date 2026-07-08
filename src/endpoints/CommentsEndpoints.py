@@ -1,4 +1,4 @@
-from Src.endpoints.BaseEndpoint import BaseEndpoint
+from src.core.BaseEndpoint import BaseEndpoint
 
 class CommentsEndpoints(BaseEndpoint):
     path = "comments"
@@ -10,7 +10,7 @@ class CommentsEndpoints(BaseEndpoint):
         return self.get(f"{self.path}/{comment_id}", **kwargs)
 
     def delete_comment(self, comment_id, **kwargs):
-        return self.delete(self.path + f"/{comment_id}", **kwargs)
+        return self.delete(f"{self.path}/{comment_id}", **kwargs)
 
     def create_a_comment(self, payload, **kwargs):
         return self.post(self.path, json=payload, headers = {"Content-Type": "application/json; charset=UTF-8"}, **kwargs)

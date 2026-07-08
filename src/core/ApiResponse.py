@@ -24,7 +24,7 @@ class ApiResponse:
         if self.json_data is None:
             raise AssertionError("Response returned empty data")
         base_path = Path(__file__).resolve().parents[2]
-        schema_path = base_path / "Test_data" / "Schemas" / folder / expected_schema
+        schema_path = base_path / "test_data" / "schemas" / folder / expected_schema
         try:
             with open(schema_path, "r") as schema_file:
                 loaded_schema = json.load(schema_file)
@@ -71,15 +71,16 @@ class ApiResponse:
         return self
 
     def check_returned_requested_content(self, received_key_value_dict, expected_key_value_dict, excluded_key=None):
-        try:
+        excluded_keys = excluded_key if excluded_key is not None else []
+        if not isinstance(received_key_value_dict, dict):
+            raise TypeError(f"Response didn't return a valid dictionary object. Got: {received_key_value_dict}")
+        for key in received_key_value_dict:
+            if key in excluded_keys:
+                continue
+            actual_value = received_key_value_dict.get(key)
+            expected_value = expected_key_value_dict.get(key)
             with check:
-                for key in received_key_value_dict:
-                    if key in excluded_key:
-                        continue
-                    with check:
-                        assert received_key_value_dict.get(key) == expected_key_value_dict.get(key), \
-                        f"Expected key: {key} to have value {expected_key_value_dict.get(key)}, but got {received_key_value_dict.get(key)}"
-        except AssertionError:
-            raise f"Response didn't return an iterable object {received_key_value_dict}"
+                assert actual_value == expected_value, \
+                    f"Expected key '{key}' to have value '{expected_value}', but got '{actual_value}'"
         return self
 

@@ -81,7 +81,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             Workflow: ${{ github.workflow }}
-            Status: ${{ job.status }} 🟢
+            Status: ${{ job.status }} 
             Actor: ${{ github.actor }}
             Commit: ${{ github.event.head_commit && github.event.head_commit.message || 'Manual run' }}
             Repository: ${{ github.repository }}

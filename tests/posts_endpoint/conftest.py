@@ -1,8 +1,6 @@
 import pytest
 import random
-from Src.endpoints.PostsEndpoints import PostsEndpoints
-from Src.endpoints.CommentsEndpoints import CommentsEndpoints
-import requests
+from src.endpoints.PostsEndpoints import PostsEndpoints
 
 from faker import Faker
 fake = Faker()

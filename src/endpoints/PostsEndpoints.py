@@ -1,4 +1,4 @@
-from Src.endpoints.BaseEndpoint import BaseEndpoint
+from src.core.BaseEndpoint import BaseEndpoint
 
 class PostsEndpoints(BaseEndpoint):
     path = "posts"
