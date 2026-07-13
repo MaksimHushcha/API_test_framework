@@ -76,27 +76,6 @@ jobs:
           ref: gh-pages
           path: gh-pages-dir
 
-      - name: Copy previous Allure history
-        if: always()
-        run: |
-          mkdir -p allure-results
-          PREV_RUN_DIR=$(ls -d gh-pages-dir/*/ 2>/dev/null | grep -v "/${{ github.run_number }}/" | sort -V | tail -n 1)
-          if [ -d "$PREV_RUN_DIR/history" ]; then
-            echo "Copying history from $PREV_RUN_DIR/history to allure-results/history"
-            cp -r "$PREV_RUN_DIR/history" allure-results/
-          else
-            echo "No previous history directory found in $PREV_RUN_DIR"
-          fi
-        continue-on-error: true
-
-      - name: Clean broken history paths
-        if: always()
-        run: |
-          if [ -d "gh-pages-dir" ]; then
-            find gh-pages-dir -type d -name "${{ github.run_number }}" -exec rm -rf {} +
-          fi
-        continue-on-error: true
-
       - name: Build Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -105,8 +84,7 @@ jobs:
           allure_results: allure-results
           gh_pages: gh-pages-dir
           allure_history: allure-history
-          keep_reports: 20
-          subfolder: ${{ github.run_number }}
+          keep_reports: 20  # Keeps the last 20 runs and cleans up older ones automatically
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -107,7 +107,7 @@ class TestPostMethodPostsTests:
         assert actual_post_response.json_data == response.json_data, \
             f"Expected to get a new post with requested content {response.json_data}, but got {actual_post_response.json_data}"
 
-@allure.epic("API Test Framework>")
+@allure.epic("API Test Framework")
 @allure.feature("Posts Endpoint")
 @allure.story("Modify Posts")
 @allure.severity(allure.severity_level.NORMAL)

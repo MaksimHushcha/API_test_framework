@@ -26,76 +26,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test_posts.TestGetPosts.__init__.test_get_posts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestGetMethodComments.test_get_comment_by_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.test_patch_edit_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.test_patch_edit_comment_by_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestPostMethodComments.test_create_a_new_comment_with_missing_keys.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestPostMethodComments.test_put_edit_comment_with_an_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.test_delete_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.test_get_comments_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.comments_endpoint.test_comments.test_put_edit_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_non_existing_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post_with_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post_with_non_existing_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetPosts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetPosts.test_get_post_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetPosts.test_get_posts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post_by_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_with_missing_keys.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_without_body.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_without_title.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post_by_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.test_delete_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_post_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_post_with_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_post_with_non_existent_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_posts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_create_a_new_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_delete_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_get_all_comments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_get_comments_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_get_comments_by_post_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_patch_edit_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_comments.test_put_edit_comment.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_create_a_new_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_delete_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_get_posts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_patch_a_post.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for tests.test_get_posts.test_replace_a_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_posts.test_get_comments_to_the_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.test_posts.test_patch_a_post.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_comments.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_get_posts.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_posts.py.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/37529/API_test_Framework/Test_data/Schemas&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for test_posts.TestGetPosts.__init__.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestGetMethodComments.test_get_comment_by_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.test_patch_edit_comment.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments.test_patch_edit_comment_by_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPostMethodComments.test_create_a_new_comment_with_missing_keys.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPostMethodComments.test_put_edit_comment_with_an_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.test_delete_comment.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.test_get_comments_by_id.executor": "Run",
+    "Python tests.Python tests for tests.comments_endpoint.test_comments.test_put_edit_comment.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestDeleteMethodPostTests.test_delete_post_with_non_existing_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post_with_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetCommentsToPostTests.test_get_comments_to_the_post_with_non_existing_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetMethodPostsTests.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetPosts.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetPosts.test_get_post_by_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetPosts.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPatchMethodPostTests.test_patch_a_post_by_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_with_missing_keys.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_without_body.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPostMethodPostsTests.test_create_a_new_post_without_title.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.TestPutMethodPost.test_replace_a_post_by_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.test_delete_post.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_post_by_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_post_with_invalid_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_post_with_non_existent_id.executor": "Run",
+    "Python tests.Python tests for tests.posts_endpoint.test_posts.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_create_a_new_comment.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_delete_comment.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_get_all_comments.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_get_comments_by_id.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_get_comments_by_post_id.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_patch_edit_comment.executor": "Run",
+    "Python tests.Python tests for tests.test_comments.test_put_edit_comment.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_create_a_new_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_create_a_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_delete_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_get_comments_to_the_post.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_get_post_by_id.executor": "Debug",
+    "Python tests.Python tests for tests.test_get_posts.test_get_posts.executor": "Run",
+    "Python tests.Python tests for tests.test_get_posts.test_patch_a_post.executor": "Debug",
+    "Python tests.Python tests for tests.test_get_posts.test_replace_a_post.executor": "Run",
+    "Python tests.Python tests for tests.test_posts.test_get_comments_to_the_post.executor": "Run",
+    "Python tests.Python tests for tests.test_posts.test_patch_a_post.executor": "Run",
+    "Python tests.Python tests in test_comments.py.executor": "Run",
+    "Python tests.Python tests in test_get_posts.py.executor": "Run",
+    "Python tests.Python tests in test_posts.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/37529/API_test_Framework/Test_data/Schemas",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\37529\API_test_Framework\Test_data\Schemas" />
@@ -110,23 +111,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests in test_posts.py">
-    <configuration name="Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="API_test_Framework" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
@@ -158,6 +142,23 @@
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestPutMethodComments&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.posts_endpoint.test_posts.TestGetMethodPostsTests.test_get_posts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API_test_Framework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.posts_endpoint.test_posts.TestGetMethodPostsTests.test_get_posts&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -198,10 +199,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_posts.py" />
+        <item itemvalue="Python tests.Python tests for tests.posts_endpoint.test_posts.TestGetMethodPostsTests.test_get_posts" />
         <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments" />
         <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments" />
         <item itemvalue="Python tests.Python tests in test_comments.py" />
-        <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id" />
       </list>
     </recent_temporary>
   </component>
