@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test_runner.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_runner.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ApiResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiResponse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/comments_endpoint/test_comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/comments_endpoint/test_comments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/posts_endpoint/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/posts_endpoint/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/posts_endpoint/test_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/posts_endpoint/test_posts.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ae1a754-9140-4c4d-8ffe-befbb5344558" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +109,7 @@
       <recent name="C:\Users\37529\API_test_Framework\tests\posts_endpoint" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments">
+  <component name="RunManager" selected="Python tests.Python tests in test_posts.py">
     <configuration name="Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="API_test_Framework" />
       <option name="ENV_FILES" value="" />
@@ -131,23 +124,6 @@
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="API_test_Framework" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -202,13 +178,30 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_posts.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API_test_Framework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/posts_endpoint/test_posts.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_posts.py" />
         <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPutMethodComments" />
         <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestPatchMethodComments" />
         <item itemvalue="Python tests.Python tests in test_comments.py" />
         <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_comment_invalid_id" />
-        <item itemvalue="Python tests.Python tests for tests.comments_endpoint.test_comments.TestDeleteMethodComments.test_delete_post_with_non_existing_id" />
       </list>
     </recent_temporary>
   </component>

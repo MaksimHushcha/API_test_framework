@@ -32,8 +32,8 @@ def pytest_generate_tests(metafunc):
 def posts_endpoints():
     return PostsEndpoints()
 
-@allure.step("Generating POST payload")
 @pytest.fixture
+@allure.step("Generating POST payload")
 def generate_a_post_payload(generate_random_id):
 
     return {
@@ -42,8 +42,8 @@ def generate_a_post_payload(generate_random_id):
         'userId': generate_random_id,
         }
 
-@allure.step("Creating a post")
 @pytest.fixture
+@allure.step("Creating a post")
 def create_and_teardown_the_post(posts_endpoints, generate_a_post_payload, request):
     response = posts_endpoints.create_a_post(generate_a_post_payload)
     created_post_id = response.json_data.get('id')
@@ -52,23 +52,23 @@ def create_and_teardown_the_post(posts_endpoints, generate_a_post_payload, reque
     # we return post id
     return created_post_id
 
-@allure.step("Creating a post")
 @pytest.fixture
+@allure.step("Creating a post")
 def create_a_post(posts_endpoints, generate_a_post_payload, request,):
     response = posts_endpoints.create_a_post(generate_a_post_payload)
     created_post_id = response.json_data.get('id')
     return created_post_id
 
-@allure.step("Getting post")
 @pytest.fixture
+@allure.step("Getting post")
 def get_post(posts_endpoints):
 
     def _get_post(post_id):
         return posts_endpoints.get_posts_by_id(post_id)
     return _get_post
 
-@allure.step("Scheduling post deletion")
 @pytest.fixture
+@allure.step("Scheduling post deletion")
 def schedule_post_deletion(request, posts_endpoints):
 
     def _register_deletion(post_id):

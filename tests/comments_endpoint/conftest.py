@@ -6,7 +6,7 @@ from src.endpoints.CommentsEndpoints import CommentsEndpoints
 from faker import Faker
 fake = Faker()
 
-@pytest.fixture()
+@pytest.fixture
 def comments_endpoints():
     return CommentsEndpoints()
 
@@ -30,8 +30,8 @@ def pytest_generate_tests(metafunc):
         ids = ["only_name_comment_key", "only_email_comment_key", "only_body_comment_key", "only_userID_comment_key"]
         metafunc.parametrize("one_key_comment_payload", scenarios, ids=ids)
 
+@pytest.fixture
 @allure.step("Generating comment payload")
-@pytest.fixture()
 def generate_a_comment_payload(generate_random_id):
 
     return {
@@ -41,8 +41,8 @@ def generate_a_comment_payload(generate_random_id):
         'postId': generate_random_id,
         }
 
-@allure.step("Creating a comment")
 @pytest.fixture
+@allure.step("Creating a comment")
 def create_and_teardown_the_comment(comments_endpoints, generate_a_comment_payload, request):
     response = comments_endpoints.create_a_comment(generate_a_comment_payload)
     created_comment_id = response.json_data.get('id')
@@ -51,23 +51,23 @@ def create_and_teardown_the_comment(comments_endpoints, generate_a_comment_paylo
     # we return post id
     return created_comment_id
 
-@allure.step("Creating a comment")
 @pytest.fixture
+@allure.step("Creating a comment")
 def create_a_comment(comments_endpoints, generate_a_comment_payload, request,):
     response = comments_endpoints.create_a_comment(generate_a_comment_payload)
     created_post_id = response.json_data.get('id')
     return created_post_id
 
-@allure.step("Getting a comment")
 @pytest.fixture
+@allure.step("Getting a comment")
 def get_comment(comments_endpoints):
 
     def _get_comment(comment_id):
         return comments_endpoints.get_comments_by_id(comment_id)
     return _get_comment
 
-@allure.step("Scheduling comment deletion")
 @pytest.fixture
+@allure.step("Scheduling comment deletion")
 def schedule_comment_deletion(request, comments_endpoints):
     def _register_deletion(post_id):
         request.addfinalizer(lambda: comments_endpoints.delete_comment(post_id))
