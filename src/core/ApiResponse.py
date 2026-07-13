@@ -3,6 +3,7 @@ from typing import Any
 from pathlib import Path
 from jsonschema import validate, ValidationError
 from pytest_check import check
+import allure
 import re
 
 class ApiResponse:
@@ -15,11 +16,13 @@ class ApiResponse:
         except ValueError:
             self.json_data = None
 
+    @allure.step("Verifying status code")
     def assert_status(self, expected_code):
         assert self.status_code == int(expected_code), \
             f" Expected status {expected_code}.but got {self.status_code}. Response body: {self.raw_response.text}"
         return self
 
+    @allure.step("Asserting schema")
     def assert_schema(self, folder, expected_schema):
         if self.json_data is None:
             raise AssertionError("Response returned empty data")
@@ -39,6 +42,7 @@ class ApiResponse:
                 f"JSON data does not match the expected schema '{expected_schema}'. Error: {err.message}")
         return self
 
+    @allure.step("Verifying that sorting is performed by id")
     def assert_sorted_by_id(self):
         first_object_id = 0
         assert isinstance(self.json_data, (list, dict)), f"Expected list or dict, got {type(self.json_data)}"
@@ -49,6 +53,7 @@ class ApiResponse:
             first_object_id = second_object_id
         return self
 
+    @allure.step("Verifying that specified key value is correct")
     def assert_returned_key_value(self, expected_key, expected_value = None, expected_regex = None):
         if (expected_value is not None) == (expected_regex is not None):
              raise AssertionError("You must provide exactly one validation method: either expected_value OR expected_regex.")
@@ -70,6 +75,7 @@ class ApiResponse:
                         f"Expected value in '{expected_key}' to match regex '{expected_regex}', but got '{actual_value}' instead."
         return self
 
+    @allure.step("Verifying that API returned requested content")
     def check_returned_requested_content(self, received_key_value_dict, expected_key_value_dict, excluded_key=None):
         excluded_keys = excluded_key if excluded_key is not None else []
         if not isinstance(received_key_value_dict, dict):

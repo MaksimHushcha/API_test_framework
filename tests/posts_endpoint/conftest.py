@@ -1,9 +1,11 @@
+import allure
 import pytest
 import random
 from src.endpoints.PostsEndpoints import PostsEndpoints
 
 from faker import Faker
 fake = Faker()
+
 
 def pytest_generate_tests(metafunc):
     if "missing_key_payload" in metafunc.fixturenames:
@@ -26,11 +28,12 @@ def pytest_generate_tests(metafunc):
 
         metafunc.parametrize("one_key_payload", scenarios, ids=ids)
 
-@pytest.fixture()
+@pytest.fixture
 def posts_endpoints():
     return PostsEndpoints()
 
-@pytest.fixture()
+@allure.step("Generating POST payload")
+@pytest.fixture
 def generate_a_post_payload(generate_random_id):
 
     return {
@@ -39,6 +42,7 @@ def generate_a_post_payload(generate_random_id):
         'userId': generate_random_id,
         }
 
+@allure.step("Creating a post")
 @pytest.fixture
 def create_and_teardown_the_post(posts_endpoints, generate_a_post_payload, request):
     response = posts_endpoints.create_a_post(generate_a_post_payload)
@@ -48,12 +52,14 @@ def create_and_teardown_the_post(posts_endpoints, generate_a_post_payload, reque
     # we return post id
     return created_post_id
 
+@allure.step("Creating a post")
 @pytest.fixture
 def create_a_post(posts_endpoints, generate_a_post_payload, request,):
     response = posts_endpoints.create_a_post(generate_a_post_payload)
     created_post_id = response.json_data.get('id')
     return created_post_id
 
+@allure.step("Getting post")
 @pytest.fixture
 def get_post(posts_endpoints):
 
@@ -61,6 +67,7 @@ def get_post(posts_endpoints):
         return posts_endpoints.get_posts_by_id(post_id)
     return _get_post
 
+@allure.step("Scheduling post deletion")
 @pytest.fixture
 def schedule_post_deletion(request, posts_endpoints):
 

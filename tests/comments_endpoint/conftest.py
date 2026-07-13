@@ -1,3 +1,4 @@
+import allure
 import pytest
 import random
 from src.endpoints.CommentsEndpoints import CommentsEndpoints
@@ -29,7 +30,7 @@ def pytest_generate_tests(metafunc):
         ids = ["only_name_comment_key", "only_email_comment_key", "only_body_comment_key", "only_userID_comment_key"]
         metafunc.parametrize("one_key_comment_payload", scenarios, ids=ids)
 
-
+@allure.step("Generating comment payload")
 @pytest.fixture()
 def generate_a_comment_payload(generate_random_id):
 
@@ -40,6 +41,7 @@ def generate_a_comment_payload(generate_random_id):
         'postId': generate_random_id,
         }
 
+@allure.step("Creating a comment")
 @pytest.fixture
 def create_and_teardown_the_comment(comments_endpoints, generate_a_comment_payload, request):
     response = comments_endpoints.create_a_comment(generate_a_comment_payload)
@@ -49,13 +51,14 @@ def create_and_teardown_the_comment(comments_endpoints, generate_a_comment_paylo
     # we return post id
     return created_comment_id
 
+@allure.step("Creating a comment")
 @pytest.fixture
 def create_a_comment(comments_endpoints, generate_a_comment_payload, request,):
     response = comments_endpoints.create_a_comment(generate_a_comment_payload)
     created_post_id = response.json_data.get('id')
     return created_post_id
 
-
+@allure.step("Getting a comment")
 @pytest.fixture
 def get_comment(comments_endpoints):
 
@@ -63,6 +66,7 @@ def get_comment(comments_endpoints):
         return comments_endpoints.get_comments_by_id(comment_id)
     return _get_comment
 
+@allure.step("Scheduling comment deletion")
 @pytest.fixture
 def schedule_comment_deletion(request, comments_endpoints):
     def _register_deletion(post_id):

@@ -34,6 +34,40 @@ jobs:
         run: pytest -v --tb=short --durations=10 --maxfail=5 -n auto --alluredir=allure-results
         continue-on-error: true
 
+      - name: Generate Allure Environment File
+        if: always()
+        run: |
+          mkdir -p allure-results
+          echo "Platform=GitHub Actions" > allure-results/environment.properties
+          echo "Python_Version=3.11" >> allure-results/environment.properties
+          echo "Base_URL=${{ secrets.BASE_URL }}" >> allure-results/environment.properties
+          echo "Branch=${{ github.ref_name }}" >> allure-results/environment.properties
+          echo "Runner_OS=Ubuntu Latest" >> allure-results/environment.properties
+          echo "Execution_ID=${{ github.run_id }}" >> allure-results/environment.properties
+
+      - name: Generate Custom Allure Categories
+        if: always()
+        run: |
+          mkdir -p allure-results
+          cat << 'EOF' > allure-results/categories.json
+          [
+            {
+              "name": "Ignored/Skipped Tests",
+              "matchedStatuses": ["skipped"]
+            },
+            {
+              "name": "Infrastructure & Gateway Defects",
+              "matchedStatuses": ["broken"],
+              "messageRegex": ".*(TimeoutError|502 Bad Gateway|504 Gateway Timeout|ConnectionRefusedError).*"
+            },
+            {
+              "name": "Product Defects (Assertion Failures)",
+              "matchedStatuses": ["failed"],
+              "messageRegex": ".*AssertionError.*"
+            }
+          ]
+          EOF
+
       - name: Load Allure history from gh-pages
         uses: actions/checkout@v4
         if: always()
@@ -41,6 +75,19 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages-dir
+
+      - name: Copy previous Allure history
+        if: always()
+        run: |
+          mkdir -p allure-results
+          PREV_RUN_DIR=$(ls -d gh-pages-dir/*/ 2>/dev/null | grep -v "/${{ github.run_number }}/" | sort -V | tail -n 1)
+          if [ -d "$PREV_RUN_DIR/history" ]; then
+            echo "Copying history from $PREV_RUN_DIR/history to allure-results/history"
+            cp -r "$PREV_RUN_DIR/history" allure-results/
+          else
+            echo "No previous history directory found in $PREV_RUN_DIR"
+          fi
+        continue-on-error: true
 
       - name: Clean broken history paths
         if: always()
